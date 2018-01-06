@@ -14,7 +14,7 @@
 		$dbhost = 'localhost';
 		$dbuser = 'root';
 		$dbpass = '';
-		$dbname = 'trydb2';
+		$dbname = 'events_shed_db';
 		$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
 		$query = "CREATE DATABASE IF NOT EXISTS $dbname";
@@ -117,13 +117,17 @@
 				$the_id = $_POST["event_id"];
 				$the_id = mysql_real_escape_string($the_id);
 
+				$event_name = $_POST["event_name"]; 
+				$event_name = mysql_real_escape_string($event_name);
+
+
 				if( empty($the_id) ) {
-					echo "<script>alert('Nothing to Delete Yet');</script>";
+					echo "<script>alert('Nothing to Delete. No Event Selected');</script>";
 				}
 				else {
 					$query = "DELETE FROM tbl_events_sched WHERE id=$the_id";
 					if (mysqli_query($conn, $query)) {
-					     echo "<script>alert('The Event with ID $the_id was SUCCESSFULLY Delete');</script>";
+					     echo "<script>alert('$event_name was SUCCESSFULLY DELETED');</script>";
 					} else {
 					    echo "Error deleting record: " . mysqli_error($conn);
 					}
@@ -209,7 +213,7 @@
 						<input class="" type="text" name="event_name"  id="event_name" placeholder="Event Name" required>
 						
 						<label>Date: </label><br>
-						<select name="month" id="input-month" required>
+						<select name="month" id="input-month">
 							<option value="">Month</option>
 							<option value="January">January</option>
 							<option value="Febuary">Febuary</option>
@@ -225,13 +229,13 @@
 							<option value="December">December</option>
 						</select>
 
-						<input type="text" name="date" placeholder="Date" id="input-date" required>
-						<input type="text" name="year" placeholder="Year" id="input-year" required><br>
+						<input type="text" name="date" placeholder="Date" id="input-date">
+						<input type="text" name="year" placeholder="Year" id="input-year"><br>
 						
 
 						<label>Time: </label><br>
 
-						<select name="hour" id="input-hour" required>
+						<select name="hour" id="input-hour" >
 							<option value="">Hour</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -247,8 +251,8 @@
 							<option value="12">12</option>
 						</select>
 
-						<input type="text" name="minute" id="input-minute" placeholder="minute" required>
-						<select name="time" id="input-time" required>
+						<input type="text" name="minute" id="input-minute" placeholder="minute" >
+						<select name="time" id="input-time">
 							<option value="">Time</option>
 							<option value="AM">AM</option>
 							<option value="PM">PM</option>
