@@ -213,7 +213,7 @@
 						<input class="" type="text" name="event_name"  id="event_name" placeholder="Event Name" required>
 						
 						<label>Date: </label><br>
-						<select name="month" id="input-month">
+						<select name="month" id="input-month" required>
 							<option value="">Month</option>
 							<option value="January">January</option>
 							<option value="Febuary">Febuary</option>
@@ -229,13 +229,13 @@
 							<option value="December">December</option>
 						</select>
 
-						<input type="text" name="date" placeholder="Date" id="input-date">
-						<input type="text" name="year" placeholder="Year" id="input-year"><br>
+						<input type="text" name="date" placeholder="Date" id="input-date" required>
+						<input type="text" name="year" placeholder="Year" id="input-year" required><br>
 						
 
 						<label>Time: </label><br>
 
-						<select name="hour" id="input-hour" >
+						<select name="hour" id="input-hour" required>
 							<option value="">Hour</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -251,7 +251,7 @@
 							<option value="12">12</option>
 						</select>
 
-						<input type="text" name="minute" id="input-minute" placeholder="minute" >
+						<input type="text" name="minute" id="input-minute" placeholder="minute" required>
 						<select name="time" id="input-time">
 							<option value="">Time</option>
 							<option value="AM">AM</option>
@@ -266,7 +266,7 @@
 					</div>
 					<div class="actions margin-auto col-12">
 						<input type="submit" name="add-event" value="Add">
-						 <input type="submit" name="delete-event" value="Delete">
+						 <input type="submit" name="delete-event" value="Delete" formnovalidate>
 						 <input type="button" name="clear-all" value="Clear All" onclick="sched.clearAll()">
 						 <input type="submit" name="update-event" value="Update">
 					</div>
