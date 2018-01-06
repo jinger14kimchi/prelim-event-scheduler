@@ -1,0 +1,176 @@
+
+@font-face {
+	font-family: Montserrat;
+	src: url('fonts/Montserrat-Regular.ttf');
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0 auto;
+	font-family: Montserrat;
+	background: #eee;
+	color: #333;
+}
+
+
+header {
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+}
+img#logo {
+	width: 180px;
+	height: auto;
+}
+
+main {
+	display: flex;
+	padding: 30px 10px;
+	margin: 10px;
+	margin-bottom: 20px!important;
+	background: white;
+	border-radius: 3px;
+}
+
+li {
+	list-style: none!important;
+}
+
+.margin-auto {
+	margin: 0 auto;
+}
+.inputs textarea{
+	width: 100%;
+	margin: 8px 0;
+	padding: 5px;
+}
+
+.add-event input[type="text"] {
+	height: 40px;
+	width: 100%;
+	margin: 8px 0;
+	padding: 5px;
+}
+
+
+.add-event input[type="submit"], .add-event input[type="button"] {
+	padding: 8px;
+	width: 100px;
+	font-size: 14px;
+}
+
+.add-event textarea {
+	height: 100px;
+}
+
+.add-event .actions {
+	text-align: center;
+}
+
+
+.actions input {
+	margin: 5px;
+	background: #40bf80;
+	color: white;
+	border: none;
+	border-radius: 1px;
+	font-size: 16px!important;
+	padding: 10px!important;
+}
+
+#input-date, #input-minute{
+	width: 50px!important;
+}
+
+#input-minute {
+	width: 80px!important;
+}
+
+#input-year {
+	width: 100px!important;
+}
+#input-month, #input-hour {
+	width: 120px;
+}
+
+#input-month, #input-time, #input-hour {
+	height: 40px;
+}
+
+label {
+	color: #333;
+	font-weight: 560;
+}
+table {
+	border-collapse: collapse;
+}
+
+.events-disp td, .events-disp th{
+	padding: 10px;
+}
+
+.fa {
+	color: #40bf80;
+}
+
+.empty {
+	color: #40bf80;
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+th{
+	text-align: left;
+	border-bottom: 2px solid #333;
+}
+tr {
+	border-bottom: 1px solid #bbb;
+
+}
+
+table thead th{
+	margin: 10px !important;
+}
+
+tbody tr:hover {
+	cursor: pointer;
+	background: #b1e7b1;
+	color: #000;
+}
+tbody td {
+	border: none;
+}
+.hide {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+.border {
+	border: 1px solid  black;
+}
+
+
+/********************
+	GRID SYSTEM
+*********************/
+
+.col-1 {width: 8.283%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.283%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.283%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.283%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
